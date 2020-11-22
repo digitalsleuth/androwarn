@@ -7,7 +7,7 @@ with open("README.md", encoding='utf8') as readme:
 
 setup(
     name="androwarn",
-    version="1.6",
+    version="1.6.1",
     author="maaaaaz",
     license="GNU GPLv3",
     url="https://github.com/digitalsleuth/androwarn",
