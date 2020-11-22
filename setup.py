@@ -21,7 +21,10 @@ setup(
     description= ("Yet another static code analyzer for malicious Android applications"),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=find_packages(),
+#    packages=find_packages(),
+    packages=[
+        "androwarn",
+    ],
     include_package_data = True,
     install_requires=[
         "androguard >= 3.2.1",
@@ -35,6 +38,6 @@ setup(
         ],
     },
     package_data={'': ['*.*', 'README.md', 'COPYING', 'COPYING.LESSER']},
-    data_files=find_data_files("warn"),
+    #data_files=find_data_files("warn"),
 )
 
