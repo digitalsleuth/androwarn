@@ -21,10 +21,7 @@ setup(
     description= ("Yet another static code analyzer for malicious Android applications"),
     long_description=long_description,
     long_description_content_type="text/markdown",
-#    packages=find_packages(),
-    packages=[
-        "androwarn",
-    ],
+    packages=find_packages(),
     include_package_data = True,
     install_requires=[
         "androguard >= 3.2.1",
