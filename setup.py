@@ -26,6 +26,6 @@ setup(
             "androwarn = androwarn.androwarn:main",
         ],
     },
-#    package_data={'': ['*.*', 'README.md', 'COPYING', 'COPYING.LESSER']},
+    package_data={'': ['*.*', 'README.md', 'COPYING', 'COPYING.LESSER']},
 )
 
