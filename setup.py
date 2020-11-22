@@ -13,6 +13,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
+    include_package_data = True,
     install_requires=[
         "androguard >= 3.2.1",
         "future",
@@ -21,7 +22,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "androwarn = androwarn.androwarn:main",
+            "androwarn = androwarn:main",
         ],
     },
     package_data={'': ['*.*', 'README.md', 'COPYING', 'COPYING.LESSER']},
