@@ -1,16 +1,9 @@
+#!/usr/bin/env python3
+
 from setuptools import setup, find_packages
-import os
 
 with open("README.md", encoding='utf8') as readme:
     long_description = readme.read()
-
-def find_data_files(source):
-    result = []
-    for directory, _, files in os.walk(source):
-        files = [os.path.join(directory, x) for x in files]
-        result.append((directory, files))
-
-    return result
 
 setup(
     name="androwarn",
@@ -22,7 +15,6 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     packages=find_packages(),
-    include_package_data = True,
     install_requires=[
         "androguard >= 3.2.1",
         "future",
@@ -35,6 +27,6 @@ setup(
         ],
     },
     package_data={'': ['*.*', 'README.md', 'COPYING', 'COPYING.LESSER']},
-    #data_files=find_data_files("warn"),
+    include_package_data = True,
 )
 
