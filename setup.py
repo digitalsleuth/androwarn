@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+import os
 
 with open("README.md", encoding='utf8') as readme:
     long_description = readme.read()
@@ -20,8 +21,7 @@ setup(
     description= ("Yet another static code analyzer for malicious Android applications"),
     long_description=long_description,
     long_description_content_type="text/markdown",
-    packages=['androwarn','androwarn/warn'],
-#    packages=find_packages(),
+    packages=find_packages(),
     include_package_data = True,
     install_requires=[
         "androguard >= 3.2.1",
@@ -35,5 +35,6 @@ setup(
         ],
     },
     package_data={'': ['*.*', 'README.md', 'COPYING', 'COPYING.LESSER']},
+    data_files=find_data_files("warn"),
 )
 
