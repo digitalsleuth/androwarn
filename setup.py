@@ -3,6 +3,14 @@ from setuptools import setup, find_packages
 with open("README.md", encoding='utf8') as readme:
     long_description = readme.read()
 
+def find_data_files(source):
+    result = []
+    for directory, _, files in os.walk(source):
+        files = [os.path.join(directory, x) for x in files]
+        result.append((directory, files))
+
+    return result
+
 setup(
     name="androwarn",
     version="1.6",
@@ -12,8 +20,8 @@ setup(
     description= ("Yet another static code analyzer for malicious Android applications"),
     long_description=long_description,
     long_description_content_type="text/markdown",
-#    packages=['androwarn/warn'],
-    packages=find_packages(),
+    packages=['androwarn','androwarn/warn'],
+#    packages=find_packages(),
     include_package_data = True,
     install_requires=[
         "androguard >= 3.2.1",
