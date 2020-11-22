@@ -22,7 +22,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "androwarn = androwarn:main",
+            "androwarn = androwarn.androwarn:main",
         ],
     },
     package_data={'': ['*.*', 'README.md', 'COPYING', 'COPYING.LESSER']},
