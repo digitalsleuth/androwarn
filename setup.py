@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from setuptools import setup, find_packages
 
@@ -8,8 +9,15 @@ with open("README.md", encoding='utf8') as readme:
 setup(
     name="androwarn",
     version="1.6.1",
-    author="maaaaaz",
-    license="GNU GPLv3",
+    author="Thomas D.",
+    author_email="tdebize@mail.com",
+    license="LGPL",
+    classifiers=[
+        "Topic :: Security",
+        "Development Status :: 5 - Production/Stable",
+        "Intended Audience :: Information Technology",
+        "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)"
+    ],
     url="https://github.com/digitalsleuth/androwarn",
     description= ("Yet another static code analyzer for malicious Android applications"),
     long_description=long_description,
@@ -21,6 +29,7 @@ setup(
         "jinja2",
         "play_scraper",
     ],
+    python_requires=">=2.7",
     entry_points={
         "console_scripts": [
             "androwarn = androwarn.androwarn:main",
